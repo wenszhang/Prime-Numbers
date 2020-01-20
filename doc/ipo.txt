@@ -1,0 +1,8 @@
+input:
+- number
+
+processing:
+- factorise
+
+output:
+- prime factors

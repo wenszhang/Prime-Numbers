@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Finds prime factors
  */
@@ -9,8 +12,24 @@ public class Primer {
      * @param n user number
      * @return list of prime factors
      */
-    public List<Integer> Primer(int n) {
-        return primesRecursive(n, 2);
+    public String Primer(int n) {
+        return toString(primesRecursive(n, 2));
+    }
+
+    /**
+     * Converts list to String
+     *
+     * @param list given list
+     * @return list as string
+     */
+    public String toString(List<Integer> list) {
+        StringBuffer sb = new StringBuffer();
+
+        for (Integer s : list) {
+            sb.append(s);
+            sb.append(", ");
+        }
+        return sb.toString().substring(0, sb.toString().length() - 2);
     }
 
     /**
